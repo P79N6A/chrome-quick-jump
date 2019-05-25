@@ -27,7 +27,9 @@ export function hideContainer() {
   if (getMode() === 'iframe') {
     window.parent.postMessage('hide-quick-jump-iframe', '*')
   } else {
-    window.close()
+    if (process.env.NODE_ENV === 'production') {
+      window.close()
+    }
   }
 }
 

@@ -4,6 +4,7 @@
     "noEmit": true,
     "target": "es2018",
     "strict": true,
+    "esModuleInterop": true,
     "strictNullChecks": false,
     "jsx": "react",
     "moduleResolution": "node"

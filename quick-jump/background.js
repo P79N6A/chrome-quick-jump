@@ -62,6 +62,7 @@ chrome.commands.onCommand.addListener(command => {
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
   if (request.type === 'request-for-tabs-info') {
     chrome.tabs.query({}, tabs => {
+      console.log(tabs)
       sendResponse(tabs)
     })
     // 返回 true 表示我们将会异步地调用 `sendResponse`
